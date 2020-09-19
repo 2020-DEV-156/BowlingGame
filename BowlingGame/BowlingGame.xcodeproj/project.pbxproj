@@ -15,6 +15,7 @@
 		ED5FD48F2516BA4F00C19008 /* MockBowlingGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD48E2516BA4F00C19008 /* MockBowlingGame.swift */; };
 		ED5FD4912516BA7C00C19008 /* SpareRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD4902516BA7C00C19008 /* SpareRound.swift */; };
 		ED5FD4932516BAAC00C19008 /* SpareRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD4922516BAAC00C19008 /* SpareRoundTests.swift */; };
+		ED5FD49C2516C4CA00C19008 /* BonusRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD49B2516C4CA00C19008 /* BonusRound.swift */; };
 		ED956E6C25169B2E0010FD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6B25169B2E0010FD5C /* AppDelegate.swift */; };
 		ED956E6E25169B2E0010FD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6D25169B2E0010FD5C /* SceneDelegate.swift */; };
 		ED956E7025169B2E0010FD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6F25169B2E0010FD5C /* ViewController.swift */; };
@@ -43,6 +44,7 @@
 		ED5FD48E2516BA4F00C19008 /* MockBowlingGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockBowlingGame.swift; sourceTree = "<group>"; };
 		ED5FD4902516BA7C00C19008 /* SpareRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareRound.swift; sourceTree = "<group>"; };
 		ED5FD4922516BAAC00C19008 /* SpareRoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareRoundTests.swift; sourceTree = "<group>"; };
+		ED5FD49B2516C4CA00C19008 /* BonusRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusRound.swift; sourceTree = "<group>"; };
 		ED956E6825169B2E0010FD5C /* BowlingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowlingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED956E6B25169B2E0010FD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED956E6D25169B2E0010FD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -82,6 +84,7 @@
 				ED5FD4892516A4CA00C19008 /* NormalRound.swift */,
 				ED5FD48B2516B9EB00C19008 /* Bonusable.swift */,
 				ED5FD4902516BA7C00C19008 /* SpareRound.swift */,
+				ED5FD49B2516C4CA00C19008 /* BonusRound.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -247,6 +250,7 @@
 				ED5FD48C2516B9EB00C19008 /* Bonusable.swift in Sources */,
 				ED956E6E25169B2E0010FD5C /* SceneDelegate.swift in Sources */,
 				ED5FD4912516BA7C00C19008 /* SpareRound.swift in Sources */,
+				ED5FD49C2516C4CA00C19008 /* BonusRound.swift in Sources */,
 				ED5FD48A2516A4CA00C19008 /* NormalRound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
