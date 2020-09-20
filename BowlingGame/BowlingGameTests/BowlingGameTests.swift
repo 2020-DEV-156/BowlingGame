@@ -112,7 +112,7 @@ class BowlingGameTests: XCTestCase {
         let finalScore = self.sut.getGamesFinalScore(rolls: [4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5])
 
         //Assert
-        XCTAssertEqual(finalScore, 90, "Stored roll should have matched with round's roll")
+        XCTAssertEqual(finalScore, 90, "Score should have matched")
     }
 
     func test_whenGivenValidSequenceOfAllStikes_ShouldReturnValidResult() {
@@ -122,7 +122,7 @@ class BowlingGameTests: XCTestCase {
         let finalScore = self.sut.getGamesFinalScore(rolls: [10,10,10,10,10,10,10,10,10,10,10,10])
 
         //Assert
-        XCTAssertEqual(finalScore, 300, "Stored roll should have matched with round's roll")
+        XCTAssertEqual(finalScore, 300, "Score should have matched")
     }
 
     func test_whenGivenValidSequenceOfAllSpares_ShouldReturnValidResult() {
@@ -132,7 +132,17 @@ class BowlingGameTests: XCTestCase {
         let finalScore = self.sut.getGamesFinalScore(rolls: [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5])
 
         //Assert
-        XCTAssertEqual(finalScore, 150, "Stored roll should have matched with round's roll")
+        XCTAssertEqual(finalScore, 150, "Score should have matched")
+    }
+
+    func test_whenResetGameCalled_shouldResetSuccessfully() {
+        //Arrange
+
+        //Act
+        let isResetSuccessful = self.sut.resetGame()
+
+        //Assert
+        XCTAssertTrue(isResetSuccessful, "Should have reset game successfully but it did not reset.")
     }
 
 }
