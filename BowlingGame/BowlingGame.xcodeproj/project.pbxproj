@@ -84,12 +84,12 @@
 			isa = PBXGroup;
 			children = (
 				ED5FD4852516A49B00C19008 /* BowlingGame.swift */,
-				ED5FD4872516A4AC00C19008 /* Round.swift */,
 				ED5FD4892516A4CA00C19008 /* NormalRound.swift */,
-				ED5FD48B2516B9EB00C19008 /* Bonusable.swift */,
 				ED5FD4902516BA7C00C19008 /* SpareRound.swift */,
-				ED5FD49B2516C4CA00C19008 /* BonusRound.swift */,
 				ED5FD49D2517381500C19008 /* StrikeRound.swift */,
+				ED5FD49B2516C4CA00C19008 /* BonusRound.swift */,
+				ED5FD4872516A4AC00C19008 /* Round.swift */,
+				ED5FD48B2516B9EB00C19008 /* Bonusable.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";

@@ -31,7 +31,7 @@ class BowlingGameTests: XCTestCase {
         XCTAssertTrue(finalScore >= 0, "Game should have valid score.")
     }
 
-    func test_whenPlayerDidNotScoreInAllDeliveriesOfGame_shouldReturnScore0() {
+    func test_whenPlayerDidNotScoreInAllRollsOfGame_shouldReturnScore0() {
         //Arrange
         self.makeNormalRounds(10, 0, 0)
 
@@ -103,6 +103,36 @@ class BowlingGameTests: XCTestCase {
 
         //Assert
         XCTAssertEqual(finalScore, 300, "Score of the game should have been matched with expected score.")
+    }
+
+    func test_whenGivenValidSequenceOfRolls_ShouldReturnValidResult() {
+        //Arrange
+
+        //Act
+        let finalScore = self.sut.getGamesFinalScore(rolls: [4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5,4,5])
+
+        //Assert
+        XCTAssertEqual(finalScore, 90, "Stored roll should have matched with round's roll")
+    }
+
+    func test_whenGivenValidSequenceOfAllStikes_ShouldReturnValidResult() {
+        //Arrange
+
+        //Act
+        let finalScore = self.sut.getGamesFinalScore(rolls: [10,10,10,10,10,10,10,10,10,10,10,10])
+
+        //Assert
+        XCTAssertEqual(finalScore, 300, "Stored roll should have matched with round's roll")
+    }
+
+    func test_whenGivenValidSequenceOfAllSpares_ShouldReturnValidResult() {
+        //Arrange
+
+        //Act
+        let finalScore = self.sut.getGamesFinalScore(rolls: [5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5])
+
+        //Assert
+        XCTAssertEqual(finalScore, 150, "Stored roll should have matched with round's roll")
     }
 
 }

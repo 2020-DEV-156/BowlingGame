@@ -11,6 +11,8 @@ class StrikeRound: Round, Bonusable {
 
     static let strikeDefaultScore = 10
 
+    let firstRoll: Int
+
     var score: Int {
         self.firstRoll + self.bonusScore
     }
@@ -18,7 +20,7 @@ class StrikeRound: Round, Bonusable {
     var bonusScore: Int {
         var bonusScore = 0
 
-        for index in 1...self.numberOfDeliveriesToCalculateBonus {
+        for index in 1...self.numberOfRollsToCalculateBonus {
             guard let roll = self.bowlingGame?.rollAt(index: self.roundRollStartIndex + index) else {
                 assertionFailure("Could not calculate bonus score")
                 return 0
@@ -29,13 +31,12 @@ class StrikeRound: Round, Bonusable {
         return bonusScore
     }
 
-    var numberOfDeliveriesToCalculateBonus: Int {
+    var numberOfRollsToCalculateBonus: Int {
         2
     }
 
     //MARK: - Private properties
 
-    private let firstRoll: Int
     private let roundRollStartIndex: Int
     private weak var bowlingGame: BowlingGameProtocol?
 
