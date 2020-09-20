@@ -7,7 +7,7 @@ import Foundation
 @testable import BowlingGame
 
 class MockBowlingGame: BowlingGameProtocol {
-    
+
     var roll: Int?
 
     var finalScore: Int = 0
@@ -22,10 +22,6 @@ class MockBowlingGame: BowlingGameProtocol {
 
     func getGamesFinalScore(rolls: [Int]) -> Int {
         self.finalScore
-    }
-
-    func resetGame() -> Bool {
-        true
     }
 
     func rollAt(index: Int) -> Int? {
