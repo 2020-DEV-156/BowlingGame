@@ -111,15 +111,15 @@ class BowlingGameTests: XCTestCase {
 
 private extension BowlingGameTests {
 
-    func makeNormalRounds(_ count: Int,_ firstDelivery: Int,_ secondDelivery: Int) {
+    func makeNormalRounds(_ count: Int,_ firstRoll: Int,_ secondRoll: Int) {
         for _ in 0..<count {
-            self.sut.normalRound(firstDelivery, secondDelivery)
+            self.sut.normalRound(firstRoll, secondRoll)
         }
     }
 
-    func makeSpareRounds(_ count: Int,_ firstDelivery: Int,_ secondDelivery: Int) {
+    func makeSpareRounds(_ count: Int,_ firstRoll: Int,_ secondRoll: Int) {
         for _ in 0..<count {
-            self.sut.spareRound(firstDelivery, secondDelivery)
+            self.sut.spareRound(firstRoll, secondRoll)
         }
     }
 
