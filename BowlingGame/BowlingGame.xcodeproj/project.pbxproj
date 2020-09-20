@@ -16,6 +16,8 @@
 		ED5FD4912516BA7C00C19008 /* SpareRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD4902516BA7C00C19008 /* SpareRound.swift */; };
 		ED5FD4932516BAAC00C19008 /* SpareRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD4922516BAAC00C19008 /* SpareRoundTests.swift */; };
 		ED5FD49C2516C4CA00C19008 /* BonusRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD49B2516C4CA00C19008 /* BonusRound.swift */; };
+		ED5FD49E2517381500C19008 /* StrikeRound.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD49D2517381500C19008 /* StrikeRound.swift */; };
+		ED5FD4A02517384900C19008 /* StrikeRoundTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED5FD49F2517384900C19008 /* StrikeRoundTests.swift */; };
 		ED956E6C25169B2E0010FD5C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6B25169B2E0010FD5C /* AppDelegate.swift */; };
 		ED956E6E25169B2E0010FD5C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6D25169B2E0010FD5C /* SceneDelegate.swift */; };
 		ED956E7025169B2E0010FD5C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED956E6F25169B2E0010FD5C /* ViewController.swift */; };
@@ -45,6 +47,8 @@
 		ED5FD4902516BA7C00C19008 /* SpareRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareRound.swift; sourceTree = "<group>"; };
 		ED5FD4922516BAAC00C19008 /* SpareRoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpareRoundTests.swift; sourceTree = "<group>"; };
 		ED5FD49B2516C4CA00C19008 /* BonusRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BonusRound.swift; sourceTree = "<group>"; };
+		ED5FD49D2517381500C19008 /* StrikeRound.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeRound.swift; sourceTree = "<group>"; };
+		ED5FD49F2517384900C19008 /* StrikeRoundTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StrikeRoundTests.swift; sourceTree = "<group>"; };
 		ED956E6825169B2E0010FD5C /* BowlingGame.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = BowlingGame.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		ED956E6B25169B2E0010FD5C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		ED956E6D25169B2E0010FD5C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -85,6 +89,7 @@
 				ED5FD48B2516B9EB00C19008 /* Bonusable.swift */,
 				ED5FD4902516BA7C00C19008 /* SpareRound.swift */,
 				ED5FD49B2516C4CA00C19008 /* BonusRound.swift */,
+				ED5FD49D2517381500C19008 /* StrikeRound.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -138,6 +143,7 @@
 				ED956E8225169B310010FD5C /* BowlingGameTests.swift */,
 				ED5FD4822516A45A00C19008 /* NormalRoundTests.swift */,
 				ED956E8425169B310010FD5C /* Info.plist */,
+				ED5FD49F2517384900C19008 /* StrikeRoundTests.swift */,
 			);
 			path = BowlingGameTests;
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				ED956E6E25169B2E0010FD5C /* SceneDelegate.swift in Sources */,
 				ED5FD4912516BA7C00C19008 /* SpareRound.swift in Sources */,
 				ED5FD49C2516C4CA00C19008 /* BonusRound.swift in Sources */,
+				ED5FD49E2517381500C19008 /* StrikeRound.swift in Sources */,
 				ED5FD48A2516A4CA00C19008 /* NormalRound.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -263,6 +270,7 @@
 				ED5FD48F2516BA4F00C19008 /* MockBowlingGame.swift in Sources */,
 				ED5FD4932516BAAC00C19008 /* SpareRoundTests.swift in Sources */,
 				ED5FD4832516A45A00C19008 /* NormalRoundTests.swift in Sources */,
+				ED5FD4A02517384900C19008 /* StrikeRoundTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
