@@ -56,7 +56,7 @@ class BowlingGame: BowlingGameProtocol {
             }
 
             if firstRoll != nil {
-                self.addNormalAndSpareRound(roll: roll,
+                self.addNormalOrSpareRound(roll: roll,
                                             firstRoll: &firstRoll,
                                             isLastRoundSpare: &isLastRoundSpare,
                                             roundCount: &roundCount)
@@ -137,7 +137,7 @@ private extension BowlingGame {
         }
     }
 
-    func addNormalAndSpareRound(roll: Int,
+    func addNormalOrSpareRound(roll: Int,
                                         firstRoll: inout Int?,
                                         isLastRoundSpare: inout Bool,
                                         roundCount: inout Int) {
