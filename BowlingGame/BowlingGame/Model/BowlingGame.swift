@@ -13,6 +13,7 @@ protocol BowlingGameProtocol: class {
 enum BowlingError: Error {
     case wrongNumberOfRounds
 }
+
 class BowlingGame: BowlingGameProtocol {
 
     //MARK: - Private properties
@@ -26,6 +27,8 @@ class BowlingGame: BowlingGameProtocol {
 
     private static let roundMaxScore = 10
     private static let totalRounds = 10
+    private static let minimumRolls = 12
+    private static let maximumRolls = 21
 
     //MARK: - Internal methods
 
@@ -43,8 +46,8 @@ class BowlingGame: BowlingGameProtocol {
         var isLastRoundSpare = false
 
         for roll in rolls {
-            if roundCount == BowlingGame.totalRounds {
-                if let score = self.addBonusRoundAndGetScore(roll: roll,
+            if isLastRoundCompleted(roundCount) {
+                if let score = self.addBonusRoundIfNeededAndGetScore(roll: roll,
                                                                 firstRoll: &firstRoll,
                                                                 isLastRoundSpare: isLastRoundSpare) {
                         return score
@@ -63,7 +66,7 @@ class BowlingGame: BowlingGameProtocol {
             }
         }
 
-        if roundCount < 10 {
+        if roundCount < BowlingGame.totalRounds {
             throw BowlingError.wrongNumberOfRounds
         }
 
@@ -78,7 +81,11 @@ class BowlingGame: BowlingGameProtocol {
     }
 }
 
+//MARK: - Private methods
+
 private extension BowlingGame {
+
+    //MARK: - Helpers to maintain rolls and rounds
 
     func normalRound(_ firstRoll: Int,_ secondRoll: Int) {
         self.rounds.append(NormalRound(firstRoll, secondRoll))
@@ -111,6 +118,8 @@ private extension BowlingGame {
         self.rolls.removeAll()
     }
 
+    //MARK: - Helpers to create game sequence
+
     func addStrikeRound(roll: Int, firstRoll: inout Int?, roundCount: inout Int) {
         if roll == BowlingGame.roundMaxScore {
             self.strikeRound()
@@ -120,7 +129,7 @@ private extension BowlingGame {
         firstRoll = roll
     }
 
-    func addBonusRoundAndGetScore(roll: Int, firstRoll: inout Int?, isLastRoundSpare: Bool) -> Int? {
+    func addBonusRoundIfNeededAndGetScore(roll: Int, firstRoll: inout Int?, isLastRoundSpare: Bool) -> Int? {
         if let first = firstRoll {
             self.bonusRound(first, roll)
             return self.finalScore
@@ -141,7 +150,7 @@ private extension BowlingGame {
             return
         }
 
-        if first + roll == BowlingGame.roundMaxScore {
+        if isSpareRound(first, roll) {
             self.spareRound(first, roll)
             isLastRoundSpare = roundCount == 9
         } else {
@@ -151,7 +160,17 @@ private extension BowlingGame {
         firstRoll = nil
     }
 
+    func isSpareRound(_ first: Int, _ roll: Int) -> Bool {
+        return first + roll == BowlingGame.roundMaxScore
+    }
+
+    func isLastRoundCompleted(_ roundCount: Int) -> Bool {
+        return roundCount == BowlingGame.totalRounds
+    }
+
+    //MARK: - Helper for basic validation
+
     func isValidNumberOf(rolls: [Int]) -> Bool {
-        rolls.count > 11 && rolls.count < 22
+        BowlingGame.minimumRolls <= rolls.count && rolls.count <= BowlingGame.maximumRolls
     }
 }
