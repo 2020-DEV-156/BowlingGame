@@ -66,10 +66,6 @@ class BowlingGame: BowlingGameProtocol {
             }
         }
 
-        if roundCount < BowlingGame.totalRounds {
-            throw BowlingError.wrongNumberOfRounds
-        }
-
         return self.finalScore
     }
 
